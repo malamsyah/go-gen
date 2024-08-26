@@ -1,0 +1,52 @@
+models:
+  User:
+    Name: string
+    Email: string
+    Age: int
+  Product:
+    Name: string
+    Price: float64
+    Stock: int
+
+routes:
+  - path: /users
+    method: POST
+    controller: CreateUser
+    model: User
+  - path: /users
+    method: GET
+    controller: GetUsers
+    model: User
+  - path: /users/{id}
+    method: GET
+    controller: GetUser
+    model: User
+  - path: /users/{id}
+    method: PUT
+    controller: UpdateUser
+    model: User
+  - path: /users/{id}
+    method: DELETE
+    controller: DeleteUser
+    model: User
+
+  - path: /products
+    method: POST
+    controller: CreateProduct
+    model: Product
+  - path: /products
+    method: GET
+    controller: GetProducts
+    model: Product
+  - path: /products/{id}
+    method: GET
+    controller: GetProduct
+    model: Product
+  - path: /products/{id}
+    method: PUT
+    controller: UpdateProduct
+    model: Product
+  - path: /products/{id}
+    method: DELETE
+    controller: DeleteProduct
+    model: Product
